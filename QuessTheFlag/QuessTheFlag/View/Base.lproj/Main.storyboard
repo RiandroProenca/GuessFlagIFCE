@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TOD-BZ-ygD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuessTheFlag" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FundoTela" translatesAutoresizingMaskIntoConstraints="NO" id="CNs-ge-bQg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EDw-Vf-hvz">
+                                <rect key="frame" x="107" y="111" width="200" height="324"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhQ-as-Qj5">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Z2H-Vq-KGX"/>
+                                            <constraint firstAttribute="height" constant="100" id="u5N-c6-m0b"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="germany"/>
+                                        <connections>
+                                            <action selector="flagButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HoE-zj-fOp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDa-Kp-R9F">
+                                        <rect key="frame" x="0.0" y="112" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="2hZ-ay-dey"/>
+                                            <constraint firstAttribute="width" constant="200" id="CqR-uh-28r"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="us"/>
+                                        <connections>
+                                            <action selector="flagButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Cq-Xg-jnQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6h-vg-379">
+                                        <rect key="frame" x="0.0" y="224" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Mfs-wG-kCn"/>
+                                            <constraint firstAttribute="width" constant="200" id="izp-Qu-oKl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="nigeria"/>
+                                        <connections>
+                                            <action selector="flagButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3F-Le-owd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="CNs-ge-bQg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="17S-OX-PUG"/>
+                            <constraint firstItem="EDw-Vf-hvz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Hg-NI-aqR"/>
+                            <constraint firstItem="CNs-ge-bQg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6gS-iD-Agk"/>
+                            <constraint firstItem="CNs-ge-bQg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GHR-gF-4GG"/>
+                            <constraint firstItem="EDw-Vf-hvz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="Nq3-oV-T7b"/>
+                            <constraint firstAttribute="bottom" secondItem="CNs-ge-bQg" secondAttribute="bottom" id="SyU-Mh-Frp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="F8m-KP-U7h"/>
+                    <connections>
+                        <outlet property="flagOne" destination="bhQ-as-Qj5" id="Nuo-NS-aO8"/>
+                        <outlet property="flagThree" destination="f6h-vg-379" id="NkV-vF-3qv"/>
+                        <outlet property="flagTwo" destination="aDa-Kp-R9F" id="Cme-ya-g1Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G6y-lN-sAg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TOD-BZ-ygD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q7n-KC-Wxx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="93P-2S-azs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTG-js-gG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FundoTela" width="540" height="960"/>
+        <image name="germany" width="200" height="100"/>
+        <image name="nigeria" width="200" height="100"/>
+        <image name="us" width="200" height="100"/>
+    </resources>
+</document>
